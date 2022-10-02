@@ -6,7 +6,8 @@ import tkinter as tk
 import math
 
 ventana = Tk()
-ventana.geometry("500x200")
+#se añade más dimensión en eje x , que es el primer termino del paréntesis
+ventana.geometry("650x100")
 ventana.title ("FACTORIAL")
 ventana.config(bg="red")
 
