@@ -15,31 +15,32 @@ ventana.config(bg="brown")
 framecalcu = Frame(ventana)
 framecalcu.place(relx= 0.5, rely=0.5, anchor=CENTER, width=400, height=200)
 
+#todos los valores deben ser float para que pueda aceptar operaciones con decimales la calculadora
 #FUNCION PARA SUMA 
 def Suma():
-    valor1= int(val1.get())
-    valor2= int(val2.get())
+    valor1= float(val1.get())
+    valor2= float(val2.get())
     resultado = valor1 + valor2
     resultadovar.set(resultado)
 
 #FUNCION PARA RESTA
 def Resta():
-    valor1= int(val1.get())
-    valor2= int(val2.get())
+    valor1= float(val1.get())
+    valor2= float(val2.get())
     resultado = valor1 - valor2
     resultadovar.set(resultado)
 
 #FUNCION PARA MULTIPICACION
 def Multiplicacion():
-    valor1= int(val1.get())
-    valor2= int(val2.get())
+    valor1= float(val1.get())
+    valor2= float(val2.get())
     resultado = valor1 * valor2
     resultadovar.set(resultado)
 
 #FUNCION PARA DIVICION 
 def Division():
-    valor1= int(val1.get())
-    valor2= int(val2.get())
+    valor1= float(val1.get())
+    valor2= float(val2.get())
     resultado = valor1 / valor2
     if valor2 == 0:
         mensaje="error"
@@ -50,13 +51,13 @@ def Division():
 
 #FUNCION PORCENTAJE 
 def Porcentaje():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     resultado = numero1 % numero2
     resultadovar.set(resultado) 
 
 def Operacione():
-    varFunction = int(radio.get())
+    varFunction = float(radio.get())
     if varFunction == 1:
         Suma()
     elif varFunction == 2:
@@ -128,11 +129,11 @@ radioResta.grid(row=3,column=2,sticky="w", padx=5, pady=5)
 radioMulti= Radiobutton(framecalcu, text="Multiplicacion", variable=radio, value=3,font=("Algerian",10))
 radioMulti.grid(row=4,column=2,sticky="w", padx=5, pady=5)
 
-radioDivicion= Radiobutton(framecalcu, text="Divicion", variable=radio, value=4,font=("Algerian",10))
+# radioDivicion= Radiobutton(framecalcu, text="Division", variable=radio, value=4,font=("Algerian",10)) LA TIPOGRAFIA algerian NO ES ADECUADA
+radioDivicion= Radiobutton(framecalcu, text="Division", variable=radio, value=4,font=("Arial",12))
 radioDivicion.grid(row=5,column=2,sticky="w", padx=5, pady=5)
 
 botoncalcu=Button(framecalcu,width=8,borderwidth =6,relief="groove", bg="pink",font=("Algerian",10),text= "Calcular", command = Operacione)
 botoncalcu.grid (row=5,column=1, padx=10, pady=0)
 
 ventana.mainloop()
-
