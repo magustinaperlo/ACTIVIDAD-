@@ -15,31 +15,32 @@ ventana.config(bg="beige")
 frameCalcu = Frame(ventana)
 frameCalcu.place(relx= 0.5, rely=0.5, anchor=CENTER)
 
+#se cambia el tipo de variable de int a float para poderaceptar números con decimales
 #FUNCION PARA SUMA 
 def Suma():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     resultado = numero1 + numero2
     resultadovar.set(resultado)
 
 #FUNCION PARA RESTA
 def Resta():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     resultado = numero1 - numero2
     resultadovar.set(resultado)
 
 #FUNCION PARA MULTIPICACION
 def Multiplicacion():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     resultado = numero1 * numero2
     resultadovar.set(resultado)
 
 #FUNCION PARA DIVICION 
 def Division():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     if numero2 == 0:
         mensaje="error"
         resultadovar.set(mensaje)
@@ -49,8 +50,8 @@ def Division():
 
 #FUNCION PORCENTAJE 
 def Porcentaje():
-    numero1= int(num1.get())
-    numero2= int(num2.get())
+    numero1= float(num1.get())
+    numero2= float(num2.get())
     resultado = numero1 % numero2
     resultadovar.set(resultado) 
 
@@ -130,3 +131,7 @@ reset.grid (row=6,column=1, padx=10, pady=0)
 ventana.mainloop()
 
 #ventana,width = 8, borderwidth = 3,relief="ridge",text = "n: ", font= ("TkFixedFont.",14)
+
+
+
+
