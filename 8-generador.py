@@ -45,31 +45,43 @@ espacio2= Label(framegenerar, text="  ")
 espacio2.grid(row=0,column=2, padx=10, pady=0)
 
 #creamos estiquetas 
-tnumero1= Label (framegenerar, text="Primer numero",font=("Algerian",10))
+#tnumero1= Label (framegenerar, text="Primer numero",font=("Algerian",10))
+tnumero1= Label (framegenerar, text="Primer numero", font=("Arial",12))
 tnumero1.grid(row=1,column=0)
 
-tnumero2= Label (framegenerar, text="Segundo numero",font=("Algerian",10))
+#tnumero2= Label (framegenerar, text="Segundo numero",font=("Algerian",10))
+tnumero2= Label (framegenerar, text="Primer numero", font=("Arial",12))
 tnumero2.grid(row=2,column=0)
 
-tgenerar= Label (framegenerar, text="Numero generado",font=("Algerian",10))
+#tgenerar= Label (framegenerar, text="Numero generado",font=("Algerian",10))
+tgenerar= Label (framegenerar, text="Numero generado",font=("Arial",12))
+
 tgenerar.grid(row=3,column=0)
 
-#cremaso cajas de numeros 
-num1= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",font=("Algerian",10),bg="pink")
-num1.grid(row=1,column=1)
+#Se añade el state readonly para que el usuario no pueda ingresar números manualmente y pueda operar solamente mediante el uso de los widgets
+#  solicitados en la consigna y no es necesario asignarles una tipografía porque sólo son "puntitos"
 
-num2= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",font=("Algerian",10),bg="pink")
+#cremaso cajas de numeros 
+#num1= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",font=("Algerian",10),bg="pink",state="readonly")
+num1= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",bg="pink",state="readonly")
+num1.grid(row=1,column=1)
+#num2= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",font=("Algerian",10),bg="pink",state="readonly")
+num2= Spinbox(framegenerar, from_=0,to=100,width=18,borderwidth =6,relief="ridge",bg="pink",state="readonly")
 num2.grid(row=2,column=1)
 
 #creamos caja donde se ve el resultado
-resgenerado=Entry(framegenerar,state="readonly", textvariable=resultado,width=30,borderwidth =6,relief="ridge",font=("Algerian",10)) 
+#la tipografia no es adecuada 
+#resgenerado=Entry(framegenerar,state="readonly", textvariable=resultado,width=30,borderwidth =6,relief="ridge",font=("Algerian",10)) 
+resgenerado=Entry(framegenerar,state="readonly", textvariable=resultado,width=13,borderwidth =6,relief="ridge",font=("Arial",12)) 
 resgenerado.grid(row=3,column=1,)
 
 #creamos botonn
-generar=Button(framegenerar,text="Generar", command=Generar,font=("Algerian",10))
+#generar=Button(framegenerar,text="Generar", command=Generar,font=("Algerian",10))
+generar=Button(framegenerar,text="Generar", command=Generar,font=("Arial",12))
 generar.grid(row=4,column=1)
 
 ventana.mainloop()
+
 
 
 
